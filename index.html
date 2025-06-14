@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Exam System</h1>
+            <p>This exam contains 40 random questions from a pool of questions.</p>
+            <p>You will have unlimited time to complete the exam.</p>
+            <button id="start-btn" class="btn btn-primary">Start Exam</button>
+        </div>
+
+        <!-- Exam Screen -->
+        <div id="exam-screen" class="screen">
+            <div class="exam-header">
+                <h2>Question <span id="current-question">1</span> of <span id="total-questions">40</span></h2>
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div id="question-text" class="question-text"></div>
+                <div id="question-image" class="question-image"></div>
+                <div id="options-container" class="options-container"></div>
+            </div>
+
+            <div class="exam-controls">
+                <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                <button id="next-btn" class="btn btn-primary">Next</button>
+                <button id="submit-btn" class="btn btn-success" style="display: none;">Submit Exam</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <h1>Exam Results</h1>
+            <div class="results-summary">
+                <div class="score-display">
+                    <h2>Your Score: <span id="final-score">0</span>%</h2>
+                    <p>Correct: <span id="correct-count">0</span> / <span id="total-count">40</span></p>
+                </div>
+            </div>
+
+            <div class="results-details">
+                <h3>Question Review</h3>
+                <div id="question-review" class="question-review"></div>
+            </div>
+
+            <button id="restart-btn" class="btn btn-primary">Take Exam Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
